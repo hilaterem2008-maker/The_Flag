@@ -55,18 +55,30 @@ def main():
     board = create_start_board()
     list_options_mine_row, list_options_mine_col = get_possible_mine_positions()
     mine_position_options_row = create_list_mine_position_options_rows(list_options_mine_row)
-    mine_position_options_col = []
-    mine_position_options_col = create_list_mine_position_options_cols(list_options_mine_col , mine_position_options_col)
-    list_remove_number = check_mine_position_options_col(mine_position_options_col)
-    for character in list_remove_number :
-        while character in mine_position_options_col :
-            mine_position_options_col.remove(character)
-    valid_len = 20
-    while len(mine_position_options_col) != valid_len :
-        mine_position_options_col = create_list_mine_position_options_cols(list_options_mine_col , mine_position_options_col)
-        mine_position_to_check = check_mine_position_options_col(mine_position_options_col)
-    print(mine_position_options_col , "mine_position_to_check")
-    print(mine_position_options_row)
+    start_list_positions = []
+    create_list_mine_position_options_cols(list_options_mine_col, start_list_positions)
+
+
+
+
+
+
+
+
+    # list_options_mine_row, list_options_mine_col = get_possible_mine_positions()
+    # mine_position_options_row = create_list_mine_position_options_rows(list_options_mine_row)
+    # mine_position_options_col = []
+    # mine_position_options_col = create_list_mine_position_options_cols(list_options_mine_col , mine_position_options_col)
+    # list_remove_number = check_mine_position_options_col(mine_position_options_col)
+    # for character in list_remove_number :
+    #     while character in mine_position_options_col :
+    #         mine_position_options_col.remove(character)
+    # valid_len = 20
+    # while len(mine_position_options_col) != valid_len :
+    #     mine_position_options_col = create_list_mine_position_options_cols(list_options_mine_col , mine_position_options_col)
+    #     mine_position_options_col = check_mine_position_options_col(mine_position_options_col)
+    # print(mine_position_options_col , "mine_position_to_check")
+    # print(mine_position_options_row)
 
 
 
