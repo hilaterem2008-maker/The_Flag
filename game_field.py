@@ -15,14 +15,15 @@ def get_possible_mine_positions() :
 
 
 
-def get_random_mine_position_in_row(list_options_row , list_options_col) :
-    mine_position_row = []
-    mine_position_col = []
-    while len(mine_position_row) != 20 :
-        to_append = random.choice(list_options_row)
-        while to_append in mine_position_row :
-            to_append = random.choice(list_options_row)
-        mine_position_row.append(to_append)
-    return mine_position_row
+def get_random_mine_position(list_options) :     #Call this function twice - once for rows and once for columns
+    mine_position_options = []
+    while len(mine_position_options) != 20 :
+        to_append = random.choice(list_options)
+        while to_append in mine_position_options :
+            to_append = random.choice(list_options)
+        mine_position_options.append(to_append)
+    return mine_position_options
+
+
 
 
