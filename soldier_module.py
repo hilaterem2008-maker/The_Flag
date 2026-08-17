@@ -27,7 +27,7 @@ def soldier_legs_location(soldier_location):
     return leg_indexes
 
 
-print("bye")
+print("bye.")
 
 
 
