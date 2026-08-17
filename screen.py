@@ -29,7 +29,7 @@ def create_main_screen():
 board = create_main_screen()
 while True:
     pygame.quit()
-
+print
 
 
 
