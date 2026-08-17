@@ -1,11 +1,5 @@
 import consts
-import pygame
 
-
-def create_soldier(soldier_img):
-    soldierIMG = pygame.image.load(soldier_img)
-    soldier = pygame.transform.scale(soldierIMG, (consts.SIDE_LENGTH, consts.SIDE_LENGTH))
-    Screen.screen.blit(soldier, (0,0))
 
 def soldier_body_index(soldier_location):
     soldier_y = soldier_location[1]
